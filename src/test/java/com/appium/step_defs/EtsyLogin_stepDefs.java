@@ -1,11 +1,17 @@
 package com.appium.step_defs;
 
 import com.appium.pages.EtsyLoginPage;
+import com.appium.utilities.MobileUtilities;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import java.util.logging.Logger;
+
 public class EtsyLogin_stepDefs {
+
+    private static final Logger logger = Logger.getLogger(EtsyLoginPage.class.getName());
+
     EtsyLoginPage etsyLoginPage = new EtsyLoginPage();
 
     @Given("use clicks on get started")

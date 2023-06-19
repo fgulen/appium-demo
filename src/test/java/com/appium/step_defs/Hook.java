@@ -16,8 +16,6 @@ public class Hook {
     @Before
     public void setup() {
 
-        CalculatorPage calculatorPage = PageFactory.initElements(Driver.get(), CalculatorPage.class);
-
         try {
             FileHandler fileHandler = new FileHandler("logfile.log", true);
             logger.addHandler(fileHandler);

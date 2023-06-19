@@ -27,8 +27,6 @@ public class Driver {
                     desiredCapabilities.setCapability("appium:appActivity", "com.etsy.android.ui.homescreen.HomescreenTabsActivity");
                     desiredCapabilities.setCapability("appium:appPackage", "com.etsy.android");
 
-
-
                     try {
                         driver = new AndroidDriver(new URL("http://localhost:4723"), desiredCapabilities);
                     } catch (MalformedURLException e) {

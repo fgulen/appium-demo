@@ -1,16 +1,22 @@
 package com.appium.step_defs;
 
 import com.appium.pages.CalculatorPage;
+import com.appium.utilities.MobileUtilities;
 import io.cucumber.java.en.Given;
 import org.junit.Assert;
 
+import java.util.logging.Logger;
+
 public class Calculator_stepDefs {
 
+    private static final Logger logger = Logger.getLogger(Calculator_stepDefs.class.getName());
 
     CalculatorPage calculatorPage = new CalculatorPage();
 
     @Given("user makes calculation")
     public void user_makes_calculation() {
+
+
 
         calculatorPage.digit1.click();//click on 1
         calculatorPage.digit1.click();
@@ -31,7 +37,6 @@ public class Calculator_stepDefs {
 
         //get text of result
         String actual = calculatorPage.result.getText();
-
         Assert.assertEquals("134", actual);
 
         //2 * 2 = 4
@@ -53,8 +58,6 @@ public class Calculator_stepDefs {
         calculatorPage.equals.click();
 
         Assert.assertEquals("11", calculatorPage.result.getText());
-
         calculatorPage.delete.click();
-
-   }
+    }
 }
